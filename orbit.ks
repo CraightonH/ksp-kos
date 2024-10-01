@@ -2,13 +2,13 @@ runOncePath("0:/lib/lib_lazcalc.ks").
 runOncePath("0:/lib/lib_deltav.ks").
 parameter targetApoapsis is 80000.
 parameter targetInclination is 0.
-parameter targetOrbVelocity is 1200.
-parameter targetAtmoVelocity is 600.
+// parameter targetOrbVelocity is 1200.
+// parameter targetAtmoVelocity is 600.
 parameter targetOrbBody is kerbin.
 
 runOncePath("0:/validate_orbit.ks", targetApoapsis, targetInclination).
 
-local orbitSuccessful is false.
+// local orbitSuccessful is false.
 
 local shipThrottle to 1.0.
 LOCK THROTTLE TO shipThrottle.
@@ -68,7 +68,7 @@ print "Coasting to apoapsis".
 
 // // TODO: calculate this value so it's accurate for a longer manuever burn 
 // local timeLeftToCalculateManeuver is 10.
-// // wait til apoapsis, then calculate node to account for any changes in apoapsis during coast
+// // TODO: wait til apoapsis, then calculate node to account for any changes in apoapsis during coast
 // until time:seconds > (time:seconds + ship:obt:eta:apoapsis - timeLeftToCalculateManeuver) {
 //     print "Waiting to calculate maneuver: " + round(ship:obt:eta:apoapsis - timeLeftToCalculateManeuver) + "s" at (0, 2).
 // }
